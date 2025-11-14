@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Camera, MapPin, Users, Award, ChevronDown, Mail, Phone } from "lucide-react";
+import { Camera, MapPin, Users, Award, ChevronDown, Mail, Phone, Zap, Gift } from "lucide-react";
 import { APP_LOGO, APP_TITLE } from "@/const";
 import { useRef } from "react";
 
@@ -44,10 +44,10 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="text-5xl md:text-6xl font-bold text-gray-900 mb-6">
-              Capture Your Precious Moments
+              Capture Your Child's Smile
             </h2>
             <p className="text-xl text-gray-700 mb-8">
-              Professional photography services in Tshwane, Gauteng. From family portraits to school photography packages, we deliver stunning images that last a lifetime.
+              Professional school and family photography in Tshwane. Quality photos at prices parents love. Serving Danville and all of Tshwane with professional, affordable photography.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button onClick={() => scrollToSection(contactRef)} size="lg" className="bg-amber-600 hover:bg-amber-700">
@@ -64,35 +64,36 @@ export default function Home() {
         </div>
       </section>
 
-      {/* About Section */}
+      {/* Why Choose Us Section */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
+          <h3 className="text-4xl font-bold text-center text-gray-900 mb-12">Why Choose KDE Photography?</h3>
           <div className="grid md:grid-cols-3 gap-8">
             <Card className="border-0 shadow-sm">
               <CardHeader className="text-center">
+                <Zap className="w-8 h-8 text-amber-600 mx-auto mb-4" />
+                <CardTitle>Best Value in Tshwane</CardTitle>
+              </CardHeader>
+              <CardContent className="text-center text-gray-600">
+                Professional quality photos at R280-R350. We deliver premium results at mid-range prices, beating budget competitors on quality and premium studios on value.
+              </CardContent>
+            </Card>
+            <Card className="border-0 shadow-sm">
+              <CardHeader className="text-center">
                 <MapPin className="w-8 h-8 text-amber-600 mx-auto mb-4" />
-                <CardTitle>Serving Tshwane</CardTitle>
+                <CardTitle>Local Advantage</CardTitle>
               </CardHeader>
               <CardContent className="text-center text-gray-600">
-                Based in Danville, we cover the entire Tshwane metropolitan area with professional photography services.
+                Based in Danville, Tshwane. Fast turnaround, minimal travel delays, and we understand your community's needs.
               </CardContent>
             </Card>
             <Card className="border-0 shadow-sm">
               <CardHeader className="text-center">
-                <Award className="w-8 h-8 text-amber-600 mx-auto mb-4" />
-                <CardTitle>Professional Quality</CardTitle>
+                <Gift className="w-8 h-8 text-amber-600 mx-auto mb-4" />
+                <CardTitle>Custom Keyrings & Branding</CardTitle>
               </CardHeader>
               <CardContent className="text-center text-gray-600">
-                High-resolution edited images delivered promptly with professional attention to detail and lighting.
-              </CardContent>
-            </Card>
-            <Card className="border-0 shadow-sm">
-              <CardHeader className="text-center">
-                <Users className="w-8 h-8 text-amber-600 mx-auto mb-4" />
-                <CardTitle>Client Focused</CardTitle>
-              </CardHeader>
-              <CardContent className="text-center text-gray-600">
-                We listen to your needs and deliver images that exceed expectations for every occasion.
+                Every package includes a custom photo keyring with your child's image. Branded packaging makes memories last forever.
               </CardContent>
             </Card>
           </div>
@@ -107,37 +108,38 @@ export default function Home() {
             <Card>
               <CardHeader>
                 <Camera className="w-8 h-8 text-amber-600 mb-4" />
-                <CardTitle>Portrait & Family Photography</CardTitle>
+                <CardTitle>School Photography</CardTitle>
+                <CardDescription>Our Specialty</CardDescription>
               </CardHeader>
               <CardContent className="text-gray-700">
-                Professional portraits for individuals, families, couples, and high school seniors. Includes multiple outfit changes and location options.
+                Professional school photo days for ECD, primary, and high schools. Individual portraits, class photos, and custom keyrings. We work with schools to offer commission opportunities (10-15% of sales) while delivering quality that parents love.
               </CardContent>
             </Card>
             <Card>
               <CardHeader>
                 <Users className="w-8 h-8 text-amber-600 mb-4" />
-                <CardTitle>School Photography Packages</CardTitle>
+                <CardTitle>Family & Portrait Photography</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-700">
-                Specialized school photo days with individual and class portraits. Parent-friendly online ordering system with multiple print options.
+                Professional family portraits, individual headshots, and personal branding sessions. Multiple outfit changes, location flexibility, and high-resolution edited images delivered promptly.
               </CardContent>
             </Card>
             <Card>
               <CardHeader>
                 <Award className="w-8 h-8 text-amber-600 mb-4" />
-                <CardTitle>Commercial & Branding</CardTitle>
+                <CardTitle>Event Coverage</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-700">
-                Business headshots, product photography, and branding sessions for local businesses. Perfect for websites and marketing materials.
+                Sports days, graduation ceremonies, school events, and corporate gatherings. Professional documentation with edited images delivered within 2-3 weeks.
               </CardContent>
             </Card>
             <Card>
               <CardHeader>
                 <Camera className="w-8 h-8 text-amber-600 mb-4" />
-                <CardTitle>Event Coverage</CardTitle>
+                <CardTitle>Commercial & Branding</CardTitle>
               </CardHeader>
               <CardContent className="text-gray-700">
-                Professional coverage of school events, corporate gatherings, and special occasions. Comprehensive documentation with edited images.
+                Business headshots, product photography, and branding sessions for local Tshwane businesses. Perfect for websites, social media, and marketing materials.
               </CardContent>
             </Card>
           </div>
@@ -149,7 +151,77 @@ export default function Home() {
         <div className="container mx-auto px-4">
           <h3 className="text-4xl font-bold text-center text-gray-900 mb-12">Pricing Packages</h3>
           
-          {/* General Packages */}
+          {/* KDE Kids Memory Package - Featured */}
+          <div className="mb-16">
+            <h4 className="text-2xl font-semibold text-gray-900 mb-8 text-center">KDE Kids Memory Package - School Photography</h4>
+            <div className="max-w-4xl mx-auto">
+              <Card className="border-2 border-amber-600 relative">
+                <div className="absolute -top-3 left-4 bg-amber-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                  Most Popular - Best Value
+                </div>
+                <CardHeader>
+                  <CardTitle className="text-3xl">R280 - R350</CardTitle>
+                  <CardDescription>Perfect for schools, ECD, and families</CardDescription>
+                </CardHeader>
+                <CardContent>
+                  <div className="space-y-6">
+                    <div>
+                      <h5 className="font-semibold text-gray-900 mb-3">What's Included:</h5>
+                      <ul className="space-y-2 text-gray-700">
+                        <li>✓ 2 professional printed photos (A5 + wallet size)</li>
+                        <li>✓ Custom photo keyring with child's image</li>
+                        <li>✓ Branded presentation envelope</li>
+                        <li>✓ Digital proof sheet (online gallery access)</li>
+                      </ul>
+                    </div>
+                    <div className="bg-amber-50 p-4 rounded-lg">
+                      <h5 className="font-semibold text-gray-900 mb-2">Tiered Options:</h5>
+                      <div className="space-y-2 text-sm text-gray-700">
+                        <p><span className="font-semibold">Starter (R280):</span> 2 prints + keyring + envelope</p>
+                        <p><span className="font-semibold">Standard (R315):</span> Starter + digital download + class photo</p>
+                        <p><span className="font-semibold">Premium (R350):</span> Standard + A4 print + gift box</p>
+                      </div>
+                    </div>
+                    <div className="bg-blue-50 p-4 rounded-lg">
+                      <h5 className="font-semibold text-gray-900 mb-2">Add-Ons:</h5>
+                      <ul className="space-y-1 text-sm text-gray-700">
+                        <li>• Digital copy only: +R50</li>
+                        <li>• Class photo print: +R30</li>
+                        <li>• Additional keyring: +R25</li>
+                      </ul>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+
+            {/* Volume Discounts */}
+            <div className="mt-8 bg-green-50 rounded-lg p-6">
+              <h5 className="text-lg font-semibold text-gray-900 mb-4 text-center">School Bulk Discounts</h5>
+              <div className="grid md:grid-cols-3 gap-4">
+                <div className="text-center">
+                  <p className="font-semibold text-gray-900">50-100 Students</p>
+                  <p className="text-2xl font-bold text-green-600">5% Off</p>
+                  <p className="text-sm text-gray-600">R266 - R332</p>
+                </div>
+                <div className="text-center">
+                  <p className="font-semibold text-gray-900">100-250 Students</p>
+                  <p className="text-2xl font-bold text-green-600">10% Off</p>
+                  <p className="text-sm text-gray-600">R252 - R315</p>
+                </div>
+                <div className="text-center">
+                  <p className="font-semibold text-gray-900">250+ Students</p>
+                  <p className="text-2xl font-bold text-green-600">15% Off</p>
+                  <p className="text-sm text-gray-600">R238 - R297</p>
+                </div>
+              </div>
+              <p className="text-center text-sm text-gray-600 mt-4">
+                <span className="font-semibold">Schools earn 10-15% commission</span> on all parent purchases
+              </p>
+            </div>
+          </div>
+
+          {/* General Photography Packages */}
           <div className="mb-16">
             <h4 className="text-2xl font-semibold text-gray-900 mb-8 text-center">Portrait & Family Sessions</h4>
             <div className="grid md:grid-cols-3 gap-8">
@@ -172,13 +244,10 @@ export default function Home() {
                 </CardContent>
               </Card>
 
-              <Card className="border-2 border-amber-600 relative">
-                <div className="absolute -top-3 left-4 bg-amber-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                  Most Popular
-                </div>
+              <Card className="border-2 border-gray-200">
                 <CardHeader>
                   <CardTitle>Standard Session</CardTitle>
-                  <CardDescription>Best Value</CardDescription>
+                  <CardDescription>Most Popular</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="mb-6">
@@ -197,7 +266,7 @@ export default function Home() {
               <Card className="border-2 border-gray-200">
                 <CardHeader>
                   <CardTitle>Premium Session</CardTitle>
-                  <CardDescription>Comprehensive Coverage</CardDescription>
+                  <CardDescription>Comprehensive</CardDescription>
                 </CardHeader>
                 <CardContent>
                   <div className="mb-6">
@@ -214,57 +283,6 @@ export default function Home() {
                 </CardContent>
               </Card>
             </div>
-          </div>
-
-          {/* School's Package */}
-          <div className="bg-gradient-to-r from-amber-50 to-orange-50 rounded-lg p-8 mb-8">
-            <h4 className="text-2xl font-semibold text-gray-900 mb-8 text-center">School's Photography Package</h4>
-            <div className="grid md:grid-cols-2 gap-8">
-              <div>
-                <h5 className="text-lg font-semibold text-gray-900 mb-4">School Session Fee</h5>
-                <Card className="border-0 bg-white">
-                  <CardContent className="pt-6">
-                    <div className="mb-4">
-                      <p className="font-semibold text-amber-600">Annual School Photo Day</p>
-                      <p className="text-2xl font-bold text-gray-900">R1,500 - R3,000</p>
-                      <p className="text-sm text-gray-600 mt-2">Professional setup, lighting, and photography of all learners (individual and class photos)</p>
-                    </div>
-                    <div className="pt-4 border-t">
-                      <p className="font-semibold text-amber-600">Event Coverage</p>
-                      <p className="text-2xl font-bold text-gray-900">R800 - R1,200/hour</p>
-                      <p className="text-sm text-gray-600 mt-2">Sports days, graduations, concerts, and other school events</p>
-                    </div>
-                  </CardContent>
-                </Card>
-              </div>
-              <div>
-                <h5 className="text-lg font-semibold text-gray-900 mb-4">Parent Purchase Options</h5>
-                <div className="space-y-4">
-                  <Card className="border-0 bg-white">
-                    <CardContent className="pt-6">
-                      <p className="font-semibold text-amber-600">Digital Only</p>
-                      <p className="text-2xl font-bold text-gray-900">R150 - R250</p>
-                      <p className="text-sm text-gray-600 mt-2">5 high-resolution digital images</p>
-                    </CardContent>
-                  </Card>
-                  <Card className="border-0 bg-white">
-                    <CardContent className="pt-6">
-                      <p className="font-semibold text-amber-600">Print Starter</p>
-                      <p className="text-2xl font-bold text-gray-900">R200 - R350</p>
-                      <p className="text-sm text-gray-600 mt-2">1 large print (A4), 2 medium (A5), 4 wallet-sized</p>
-                    </CardContent>
-                  </Card>
-                  <Card className="border-0 bg-white">
-                    <CardContent className="pt-6">
-                      <p className="font-semibold text-amber-600">Ultimate Combo</p>
-                      <p className="text-2xl font-bold text-gray-900">R400 - R600</p>
-                      <p className="text-sm text-gray-600 mt-2">All digital images + Print Starter + Class photo</p>
-                    </CardContent>
-                  </Card>
-                </div>
-              </div>
-            </div>
-            <p className="text-center text-sm text-gray-600 mt-6">Schools receive 10-15% commission on all parent purchases</p>
           </div>
 
           {/* Additional Info */}
@@ -284,7 +302,7 @@ export default function Home() {
             <Card>
               <CardHeader>
                 <CardTitle>Ready to Book Your Session?</CardTitle>
-                <CardDescription>Contact us today for inquiries, bookings, or custom packages</CardDescription>
+                <CardDescription>Contact us today for school bookings, family sessions, or custom packages</CardDescription>
               </CardHeader>
               <CardContent>
                 <div className="space-y-6">
@@ -328,15 +346,15 @@ export default function Home() {
                 <Camera className="w-6 h-6 text-amber-600" />
                 <h4 className="text-lg font-bold">KDE Photography</h4>
               </div>
-              <p className="text-gray-400">Professional photography services in Tshwane, Gauteng, South Africa.</p>
+              <p className="text-gray-400">Professional photography services in Tshwane, Gauteng, South Africa. Specializing in school photography and family portraits.</p>
             </div>
             <div>
               <h4 className="text-lg font-semibold mb-4">Services</h4>
               <ul className="space-y-2 text-gray-400">
-                <li><a href="#" className="hover:text-amber-600 transition">Portrait Photography</a></li>
-                <li><a href="#" className="hover:text-amber-600 transition">School Packages</a></li>
-                <li><a href="#" className="hover:text-amber-600 transition">Commercial Photography</a></li>
+                <li><a href="#" className="hover:text-amber-600 transition">School Photography</a></li>
+                <li><a href="#" className="hover:text-amber-600 transition">Family Portraits</a></li>
                 <li><a href="#" className="hover:text-amber-600 transition">Event Coverage</a></li>
+                <li><a href="#" className="hover:text-amber-600 transition">Commercial Photography</a></li>
               </ul>
             </div>
             <div>
